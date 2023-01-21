@@ -1,0 +1,33 @@
+type Query{
+ ping: String
+    getMovies:[Movie!]
+  
+   
+}
+
+type Movie{
+title:String!
+ descripcion:String!
+ Like:String!
+ img:String!
+ Date_of_released:String!
+}
+
+type Mutation {
+    createMovie(input:MovieInput) : Movie
+   
+}
+type Mutation{
+    updateMovie(input:MovieInput):Movie
+}
+type Mutation{
+    removeMovie(input:MovieInput):Movie
+}
+input MovieInput {
+   
+    title:String!
+   descripcion:String!
+     Like:String!
+    Date_of_released:String!
+    img:String!
+}
